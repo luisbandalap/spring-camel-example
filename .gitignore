@@ -1,0 +1,48 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Target
+**/target
+**/logs
+
+# Netbeans
+**/nb-configuration*.xml
+**/nbactions*.xml
+**/packages/**
+
+# Visual Studio .Net
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+**/bin/Debug/*
+**/bin/Release/*
+**/obj/Debug/*
+**/obj/Release/*
+
+
+**/.vs/**
+*.project
+**/.settings/**
+*.classpath
+**/nbproject/
+
+# Should be included
+
+# Orig Files
+*.orig
+
+# .NET Temporal Files
+*.cache
+*.FileListAbsolute.txt

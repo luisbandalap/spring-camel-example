@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/json,text/plain,text/css,text/javascript,application/javascript
+    min-response-size: 2048 
+
+camel:
+  springboot:
+    name: SpringCamel
+    
+management:
+  port: 8081
+  endpoints:
+    web:
+      exposure.include: health,info,hawtio,jolokia
+      
+endpoints:
+  enabled: false
+  health:
+    enabled: true
+
+hawtio:
+    authenticationEnabled: false
+    
+quickstart:
+  generateOrderPeriod: 10s
+  processOrderPeriod: 30s
+  
+jlbp:
+  api:
+    path: '/camel'
+    
+jsa.activemq:
+    broker:
+        url: tcp://127.0.0.1:61616?jms.prefetchPolicy.queuePrefetch=0
+        username: admin
+        password: admin
+    queues:
+        test: com.jlbp.test-queue

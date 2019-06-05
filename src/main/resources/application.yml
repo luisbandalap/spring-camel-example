@@ -4,6 +4,10 @@ server:
     enabled: true
     mime-types: text/html,text/xml,text/json,text/plain,text/css,text/javascript,application/javascript
     min-response-size: 2048 
+    
+spring:
+    pid:
+        file: app.pid
 
 camel:
   springboot:
@@ -13,7 +17,7 @@ management:
   port: 8081
   endpoints:
     web:
-      exposure.include: health,info,hawtio,jolokia
+      exposure.include: health,info,hawtio,jolokia,metrics,trace
       
 endpoints:
   enabled: false
